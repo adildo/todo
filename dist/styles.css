@@ -1,0 +1,226 @@
+* {
+    font-family: Chalkduster, fantasy;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    align-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 35px;
+    background-color: rgb(61, 67, 73);
+    color: white;
+}
+main {
+    display: flex;
+    flex-grow: 1;
+    font-size: 30px; 
+}
+.del {
+    color: rgb(209, 33, 33)
+}
+#project-management {
+    width: 30%;
+    background-color: rgb(141, 141, 90);
+    text-align: center;
+    padding: 16px 8px;
+}
+h2 {
+    font-size: 24px;
+    text-decoration: underline;
+}
+#todo-management{
+    background-color: rgb(119, 119, 92);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+#projects {
+    background-color: rgb(119, 119, 92);
+    min-height: 70px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 10px;
+}
+footer {
+    background-color: rgb(61, 67, 73);
+    text-align: center;
+    font-size: 20px;
+    padding: 6px ;
+    color: white;
+}
+
+button#submitProject {
+    padding: 8px 16px;
+    border-radius: 16px;
+
+}
+input {
+    border-radius: 16px;
+    padding: 8px 16px;
+}
+
+
+.itemName {
+    font-size: 16px;
+    background-color: rgb(141, 141, 90);
+    color: white;
+    width: 150px;
+    border-radius: 8px;
+    padding: 0;
+}
+
+.itemName:hover {
+    background-color: rgb(119, 119, 92);
+}
+
+.settings {
+    padding: 0px 1px;
+    font-size: 8px;
+    display: flex;
+    gap: 2px;
+}
+.container {
+    background-color: rgb(61, 67, 73);
+    padding: 4px 18px;
+    border-radius: 6px;
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.setting {
+    display: flex;
+}
+
+#projName {
+    text-align: center;
+}
+#todos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 8px; */
+    background-color: rgb(141, 141, 90);
+    border-radius: 15px;
+    
+}
+#newTodoBtn {
+    max-width: 180px;
+    border: 2px solid black ;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 8px;
+
+}
+.modal {
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 4px;
+    z-index: 10;
+    background-color: white;
+    width: 300px;
+    max-width: 40%;
+    gap: 10px;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 30px;
+    color: rgb(61, 67, 73);
+    border-bottom: solid;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+}
+select {
+    width: 80px;
+    height: 70px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: rgb(119, 119, 92);
+    font-size: 20px;
+}
+
+.infoCont {
+    display: flex;
+    font-size: 16px;
+    justify-content: space-between;
+    background-color: rgb(119, 119, 92);
+    border-radius: 8px;
+    gap: 8px;
+    padding: 6px 16px;
+    width: 90%;
+}
+.infoCont:hover {
+    background-color: rgb(141, 141, 90);
+}
+
+#todos .container{
+    border-radius: 20px;
+    gap: 6px;
+    width: 90%;
+    margin: 8px;
+}
+
+.todo {
+    margin: 0;
+}
+

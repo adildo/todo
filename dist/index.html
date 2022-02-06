@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Todo List</h1>
+        <h3 id="todayDate"></h3>
+    </header>
+    <main>
+        <div id="project-management">My Tasks
+            <h2>Projects</h2>
+            <div id="projects"></div>
+            <form id="projectForm">
+                <input id="newTaskInput" type="text" placeholder="New Project Name" required>
+                <button type="submit" id="submitProject">Create New Project</button>
+            </form>
+        </div>
+        <div id="todo-management">My Todos for:
+            <h2 id="openedProject"></h2>
+            <div id="todos"></div>
+        </div>
+    </main>
+
+    <footer>Copyright © All Rights Reserved to Adi Zilberstein</footer>
+    <div class="modal" id="todoModal">
+        <div class="modal-header">
+            <div>New Task</div>
+            <button data-close-modal id="close-todo-modal" class="close-button" >&times;</button>
+        </div>
+        <form id="todoForm">
+            <div>
+                <label for="taskName">Task Name</label><br>
+                <input type="text" id="taskName" name="name" placeholder="Task Name" required>
+            </div>
+            <div>
+                <label for="dueDate">Due Date</label><br>
+                <input type="date" name="dueDate" id="dueDate" min="2022-01-01" required>
+            </div>
+            <div>
+                <label for="priority">Priority</label><br>
+                <select name="priority" id="priority" multiple required>
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+            <div>
+                <label for="info">Description</label><br>
+                <textarea name="info" id="info" cols="30" rows="6" required></textarea>
+            </div>
+            <button type="submit" id="submitTodo">Submit</button>
+        </form>
+    </div>
+    <div id="overlay"></div>
+    <script src="main.js"></script>
+</body>
+</html>
